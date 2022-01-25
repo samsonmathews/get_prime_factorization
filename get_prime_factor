@@ -1,0 +1,17 @@
+a=int(input('please enter the number'))
+prime_list=[]
+prime_fact=[]
+for num in range(0, a + 1):
+   # all prime numbers are greater than 1
+   if num > 1:
+       for i in range(2, num):
+           if (num % i) == 0:
+               break
+       else:
+           prime_fact.append(num)
+for i in prime_fact:
+        if a % i == 0:
+            prime_list.append(i)
+            if (a // i) % i == 0:
+                prime_list.append(i)
+print(prime_list)
